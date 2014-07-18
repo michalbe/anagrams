@@ -1,3 +1,5 @@
+'use strict';
+
 var mequal = require('multiple-equal');
 
 var isAnagram = function() {
@@ -14,10 +16,12 @@ var isAnagram = function() {
   args.forEach(function(singleString, index) {
     // remove all non alphanumeric characters
     // like spaces and aphostrophes
-    singleString = singleString.replace(/[^azA-Z0-9]/gi, "");
+    singleString = singleString.replace(/[^azA-Z0-9]/gi, '');
     maps[index] = {};
     singleString.split('').forEach(createMap.bind(maps[index]));
   });
 
   return mequal.apply(this, maps);
-}
+};
+
+module.exports = isAnagram;
