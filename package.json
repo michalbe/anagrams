@@ -6,5 +6,8 @@
   "scripts": {
     "test": "node tests/anagram-tests.js",
     "lint": "node node_modules/jshint/bin/jshint ."
+  },
+  "dependencies": {
+    "multiple-equal": "^1.0.1"
   }
 }
