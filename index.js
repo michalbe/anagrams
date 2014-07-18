@@ -12,7 +12,7 @@ var isAnagram = function(first, second) {
 
   var createMap = function(char) {
     if (!this[char]) {
-        this[char] = 0;
+      this[char] = 0;
     }
     this[char]++;
   }
