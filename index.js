@@ -16,7 +16,7 @@ var isAnagram = function() {
   args.forEach(function(singleString, index) {
     // remove all non alphanumeric characters
     // like spaces and aphostrophes
-    singleString = singleString.replace(/[^azA-Z0-9]/gi, '');
+    singleString = singleString.replace(/[^azA-Z0-9]/gi, '').toLowerCase();
     maps[index] = {};
     singleString.split('').forEach(createMap.bind(maps[index]));
   });
