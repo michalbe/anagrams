@@ -11,10 +11,10 @@ var isAnagram = function(first, second) {
   var secondMap = {};
 
   var createMap = function(char) {
-      if (!this[char]) {
-          this[char] = 0;
-      }
-      this[char]++;
+    if (!this[char]) {
+        this[char] = 0;
+    }
+    this[char]++;
   }
 
   first.split('').forEach(createMap.bind(firstMap));
